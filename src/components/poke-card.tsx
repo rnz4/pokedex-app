@@ -17,6 +17,23 @@ const PokeCardLayout = styled.div`
   box-shadow: 0 0 10px #0acf11;
 `;
 
-export const PokeCard = ({}) => {
-  return <PokeCardLayout />;
+const PokeImg = styled.img`
+  width: 300px;
+  height: 300px;
+`;
+
+interface IPokeCard {
+  id: number;
+  name: string;
+  imageUrl: string;
+}
+
+export const PokeCard = ({ id, name, imageUrl }: IPokeCard) => {
+  return (
+    <PokeCardLayout>
+      <p>{id}</p>
+      <p>{name}</p>
+      <PokeImg src={imageUrl} />
+    </PokeCardLayout>
+  );
 };
