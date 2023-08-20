@@ -1,14 +1,16 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import PokemonService from "./../services/pokemon.service";
 import { PokeCard } from "../components/poke-card";
 import styled from "styled-components";
 
 const Layout = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 30px;
   justify-content: center;
   align-items: center;
   background-color: #000000;
-  height: 100vh;
   //background: radial-gradient(
   //  circle,
   //  rgba(21, 65, 75, 1) 9%,
@@ -17,10 +19,19 @@ const Layout = styled.div`
   //);
 `;
 
+interface IPokemon {
+  id: number;
+  name: string;
+  image: string;
+}
+
 export default function Home() {
+  const [pokemons, setPokemons] = useState<IPokemon[]>([]);
+
   const fetchPokemons = async () => {
     const $pokemons = await PokemonService.getPokemons();
     console.log($pokemons);
+    setPokemons($pokemons);
   };
 
   useEffect(() => {
@@ -28,7 +39,14 @@ export default function Home() {
   }, []);
   return (
     <Layout>
-      <PokeCard></PokeCard>
+      {pokemons.map((pokemon: IPokemon) => (
+        <PokeCard
+          key={pokemon.id}
+          id={pokemon.id}
+          name={pokemon.name}
+          imageUrl={pokemon.image}
+        />
+      ))}
     </Layout>
   );
 }
