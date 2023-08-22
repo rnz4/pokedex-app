@@ -23,6 +23,7 @@ interface IPokemon {
   id: number;
   name: string;
   image: string;
+  type: string;
 }
 
 export default function Home() {
@@ -45,6 +46,7 @@ export default function Home() {
           id={pokemon.id}
           name={pokemon.name}
           imageUrl={pokemon.image}
+          type={pokemon.type}
         />
       ))}
     </Layout>
