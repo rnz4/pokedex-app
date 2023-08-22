@@ -3,182 +3,254 @@
      {
         "id":1,
         "name":"Bulbasaur",
-        "image": "http://localhost:8000/bulbasaur.png"
+        "image": "http://localhost:8000/bulbasaur.png",
+        "type": "grass"
      },
      {
         "id":2,
         "name":"Ivysaur",
-        "image":"http://localhost:8000/ivysaur.png"
+        "image":"http://localhost:8000/ivysaur.png",
+        "type": "grass"
      },
      {
         "id":3,
         "name":"Venusaur",
-        "image":"http://localhost:8000/venusaur.png"
+        "image":"http://localhost:8000/venusaur.png",
+        "type": "grass"
      },
      {
       "id":4,
       "name":"Charmander",
-      "image":"http://localhost:8000/charmander.png"
+      "image":"http://localhost:8000/charmander.png",
+      "type": "fire"
    },
    {
       "id":5,
       "name":"Charmeleon",
-      "image":"http://localhost:8000/charmeleon.png"
+      "image":"http://localhost:8000/charmeleon.png",
+      "type": "fire"
    },
    {
       "id":6,
       "name":"Charizard",
-      "image":"http://localhost:8000/charizard.png"
+      "image":"http://localhost:8000/charizard.png",
+      "type": "fire"
    },
    {
       "id":7,
       "name":"Squirtle",
-      "image":"http://localhost:8000/squirtle.png"
+      "image":"http://localhost:8000/squirtle.png",
+      "type": "water"
    },
    {
       "id":8,
       "name":"Wartortle",
-      "image":"http://localhost:8000/wartortle.png"
+      "image":"http://localhost:8000/wartortle.png",
+      "type": "water"
    },
    {
       "id":9,
       "name":"Blastoise",
-      "image":"http://localhost:8000/blastoise.png"
+      "image":"http://localhost:8000/blastoise.png",
+      "type": "water"
    },
    {
       "id":10,
       "name":"Caterpie",
-      "image":"http://localhost:8000/caterpie.png"
+      "image":"http://localhost:8000/caterpie.png",
+      "type": "bug"
    },
    {
       "id":11,
       "name":"Metapod",
-      "image":"http://localhost:8000/metapod.png"
+      "image":"http://localhost:8000/metapod.png",
+      "type": "bug"
    },
    {
       "id":12,
       "name":"Butterfree",
-      "image":"http://localhost:8000/butterfree.png"
+      "image":"http://localhost:8000/butterfree.png",
+      "type": "bug"
+   },
+   {
+      "id":25,
+      "name":"Pikachu",
+      "image":"http://localhost:8000/pikachu.png",
+      "type": "electric"
+   },
+   {
+      "id":26,
+      "name":"Raichu",
+      "image":"http://localhost:8000/raichu.png",
+      "type": "electric"
    },
    {
       "id":69,
       "name":"Bellsprout",
-      "image":"http://localhost:8000/bellsprout.png"
+      "image":"http://localhost:8000/bellsprout.png",
+      "type": "grass"
    },
    {
       "id":70,
       "name":"Weepinbell",
-      "image":"http://localhost:8000/weepinbell.png"
+      "image":"http://localhost:8000/weepinbell.png",
+      "type": "grass"
    },
    {
       "id":71,
       "name":"Victreebel",
-      "image":"http://localhost:8000/victreebel.png"
+      "image":"http://localhost:8000/victreebel.png",
+      "type": "grass"
    },
    {
       "id":92,
       "name":"Gastly",
-      "image":"http://localhost:8000/gastly.png"
+      "image":"http://localhost:8000/gastly.png",
+      "type": "phantom"
    },
    {
       "id":93,
       "name":"Haunter",
-      "image":"http://localhost:8000/haunter.png"
+      "image":"http://localhost:8000/haunter.png",
+      "type": "phantom"
    },
    {
       "id":94,
       "name":"Gengar",
-      "image":"http://localhost:8000/gengar.png"
+      "image":"http://localhost:8000/gengar.png",
+      "type": "phantom"
+   },
+   {
+      "id":95,
+      "name":"Onix",
+      "image":"http://localhost:8000/onix.png",
+      "type": "rock"
    },
    {
       "id":109,
       "name":"Koffing",
-      "image":"http://localhost:8000/koffing.png"
+      "image":"http://localhost:8000/koffing.png",
+      "type": "poison"
    },
    {
       "id":110,
       "name":"Weezing",
-      "image":"http://localhost:8000/weezing.png"
+      "image":"http://localhost:8000/weezing.png",
+      "type": "poison"
    },
    {
       "id":115,
       "name":"Kangaskhan",
-      "image":"http://localhost:8000/kangaskhan.png"
+      "image":"http://localhost:8000/kangaskhan.png",
+      "type": "normal"
+   },
+   {
+      "id":122,
+      "name":"Mr. Mime",
+      "image":"http://localhost:8000/mr.mime.png",
+      "type": "psychic"
    },
    {
       "id":123,
       "name":"Scyther",
-      "image":"http://localhost:8000/scyther.png"
+      "image":"http://localhost:8000/scyther.png",
+      "type": "bug"
    },
    {
       "id":124,
       "name":"Jynx",
-      "image":"http://localhost:8000/jynx.png"
+      "image":"http://localhost:8000/jynx.png",
+      "type": "ice"
    },
    {
       "id":125,
       "name":"Electabuzz",
-      "image":"http://localhost:8000/electabuzz.png"
+      "image":"http://localhost:8000/electabuzz.png",
+      "type": "electric"
    },
    {
       "id":126,
       "name":"Magmar",
-      "image":"http://localhost:8000/magmar.png"
+      "image":"http://localhost:8000/magmar.png",
+      "type": "fire"
    },
    {
       "id":127,
       "name":"Pinsir",
-      "image":"http://localhost:8000/pinsir.png"
+      "image":"http://localhost:8000/pinsir.png",
+      "type": "bug"
    },
    {
       "id":128,
       "name":"Tauros",
-      "image":"http://localhost:8000/tauros.png"
+      "image":"http://localhost:8000/tauros.png",
+      "type": "normal"
    },
    {
       "id":129,
       "name":"Magikarp",
-      "image":"http://localhost:8000/magikarp.png"
+      "image":"http://localhost:8000/magikarp.png",
+      "type": "water"
    },
    {
       "id":130,
       "name":"Gyarados",
-      "image":"http://localhost:8000/gyarados.png"
+      "image":"http://localhost:8000/gyarados.png",
+      "type": "water"
    },
    {
       "id":131,
       "name":"Lapras",
-      "image":"http://localhost:8000/lapras.png"
+      "image":"http://localhost:8000/lapras.png",
+      "type": "ice"
    },
    {
       "id":132,
       "name":"Ditto",
-      "image":"http://localhost:8000/ditto.png"
+      "image":"http://localhost:8000/ditto.png",
+      "type": "normal"
+   },
+   {
+      "id":137,
+      "name":"Porygon",
+      "image":"http://localhost:8000/porygon.png",
+      "type": "normal"
+   },
+   {
+      "id":142,
+      "name":"Aerodactyl",
+      "image":"http://localhost:8000/aerodactyl.png",
+      "type": "rock"
    },
    {
       "id":147,
       "name":"Dratini",
-      "image":"http://localhost:8000/dratini.png"
+      "image":"http://localhost:8000/dratini.png",
+      "type": "dragon"
    },
    {
       "id":148,
       "name":"Dragonair",
-      "image":"http://localhost:8000/dragonair.png"
+      "image":"http://localhost:8000/dragonair.png",
+      "type": "dragon"
    },
    {
       "id":149,
       "name":"Dragonite",
-      "image":"http://localhost:8000/dragonite.png"
+      "image":"http://localhost:8000/dragonite.png",
+      "type": "dragon"
    },
    {
       "id":150,
       "name":"Mewtwo",
-      "image":"http://localhost:8000/mewtwo.png"
+      "image":"http://localhost:8000/mewtwo.png",
+      "type": "psychic"
    },
    {
       "id":151,
       "name":"Mew",
-      "image":"http://localhost:8000/mew.png"
+      "image":"http://localhost:8000/mew.png",
+      "type": "psychic"
    }
   ]
 }
