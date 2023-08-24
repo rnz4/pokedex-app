@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import PokemonService from "./../services/pokemon.service";
 import { PokeCard } from "../components/poke-card";
 import styled from "styled-components";
+import { Header } from "../components/header";
 
 const Layout = styled.div`
   display: flex;
@@ -40,6 +41,7 @@ export default function Home() {
   }, []);
   return (
     <Layout>
+      <Header />
       {pokemons.map((pokemon: IPokemon) => (
         <PokeCard
           key={pokemon.id}
