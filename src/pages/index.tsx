@@ -3,6 +3,8 @@ import PokemonService from "./../services/pokemon.service";
 import { PokeCard } from "../components/poke-card";
 import styled from "styled-components";
 import { Header } from "../components/header";
+import { IPokemon } from "./../interfaces/poke-interfaces";
+import { usePokeTeam } from "./../context/poketeam-context";
 
 const Layout = styled.div`
   display: flex;
@@ -20,37 +22,37 @@ const Layout = styled.div`
   //);
 `;
 
-interface IPokemon {
-  id: number;
-  name: string;
-  image: string;
-  type: string;
-}
-
 export default function Home() {
   const [pokemons, setPokemons] = useState<IPokemon[]>([]);
+  const { addPokemon } = usePokeTeam();
 
   const fetchPokemons = async () => {
     const $pokemons = await PokemonService.getPokemons();
-    console.log($pokemons);
     setPokemons($pokemons);
+  };
+
+  const setMyTeam = (pokemon: IPokemon) => {
+    addPokemon(pokemon);
   };
 
   useEffect(() => {
     fetchPokemons();
   }, []);
+
   return (
     <Layout>
       <Header />
       {pokemons.map((pokemon: IPokemon) => (
         <PokeCard
           key={pokemon.id}
-          id={pokemon.id}
-          name={pokemon.name}
-          imageUrl={pokemon.image}
-          type={pokemon.type}
+          {...pokemon}
+          setMyTeam={() => setMyTeam(pokemon)}
         />
       ))}
     </Layout>
   );
 }
+
+// funcion con parametro en on click
+//<button onClick={test}>test</button>
+//<button onClick={()=>test("test")}>test</button>
