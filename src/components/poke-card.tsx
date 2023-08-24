@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Colors } from "./../styles/color-variables";
 import { TypeTag } from "./type-tag";
+import { IPokemon } from "./../interfaces/poke-interfaces";
 
 const PokeCardLayout = styled.div`
   display: flex;
@@ -41,19 +42,19 @@ const CustomP = styled.p`
   margin: 0px;
 `;
 
-interface IPokeCard {
-  id: number;
-  name: string;
-  imageUrl: string;
-  type: string;
+interface IPokeCard extends IPokemon {
+  setMyTeam: () => void;
 }
 
-export const PokeCard = ({ id, name, imageUrl, type }: IPokeCard) => {
+export const PokeCard = ({ setMyTeam, id, name, image, type }: IPokeCard) => {
   return (
-    <PokeCardLayout color={Colors[type as keyof typeof Colors]}>
+    <PokeCardLayout
+      color={Colors[type as keyof typeof Colors]}
+      onClick={setMyTeam}
+    >
       <CustomP>#{id}</CustomP>
       <CustomP>{name}</CustomP>
-      <PokeImg src={imageUrl} />
+      <PokeImg src={image} />
       <TypeTag type={type} />
     </PokeCardLayout>
   );
