@@ -43,7 +43,7 @@ const CustomP = styled.p`
 `;
 
 interface IPokeCard extends IPokemon {
-  setMyTeam: () => void;
+  setMyTeam?: () => void;
 }
 
 export const PokeCard = ({ setMyTeam, id, name, image, type }: IPokeCard) => {

@@ -1,8 +1,8 @@
+import { useRouter } from "next/router";
 import React from "react";
 import styled from "styled-components";
 
 const MyHeader = styled.div`
-  width: 100vw;
   height: 110px;
   display: flex;
   justify-content: space-between;
@@ -10,6 +10,7 @@ const MyHeader = styled.div`
   background-color: #2a2a2b;
   contain: content;
   padding: 0px 30px 0px 30px;
+  margin-top: 0px;
 `;
 
 const Pokeball = styled.img`
@@ -26,10 +27,17 @@ const PokeLogo = styled.img`
 `;
 
 export const Header = () => {
+  const router = useRouter();
+  const handleButtonClick = () => {
+    router.push("/myTeam");
+  };
   return (
     <MyHeader>
       <PokeLogo src={"http://localhost:8000/pokelogo.png"} />
-      <Pokeball src={"http://localhost:8000/pokeball.png"} />
+      <Pokeball
+        src={"http://localhost:8000/pokeball.png"}
+        onClick={handleButtonClick}
+      />
     </MyHeader>
   );
 };
