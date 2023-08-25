@@ -14,12 +14,7 @@ const Layout = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #000000;
-  //background: radial-gradient(
-  //  circle,
-  //  rgba(21, 65, 75, 1) 9%,
-  //  rgba(9, 107, 121, 0.938813025210084) 47%,
-  //  rgba(74, 80, 75, 1) 100%
-  //);
+  padding: 100px 0px 50px 0px;
 `;
 
 export default function Home() {
@@ -40,16 +35,18 @@ export default function Home() {
   }, []);
 
   return (
-    <Layout>
+    <>
       <Header />
-      {pokemons.map((pokemon: IPokemon) => (
-        <PokeCard
-          key={pokemon.id}
-          {...pokemon}
-          setMyTeam={() => setMyTeam(pokemon)}
-        />
-      ))}
-    </Layout>
+      <Layout>
+        {pokemons.map((pokemon: IPokemon) => (
+          <PokeCard
+            key={pokemon.id}
+            {...pokemon}
+            setMyTeam={() => setMyTeam(pokemon)}
+          />
+        ))}
+      </Layout>
+    </>
   );
 }
 

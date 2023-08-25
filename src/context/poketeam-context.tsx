@@ -1,6 +1,5 @@
 import * as React from "react";
 import { IPokemon } from "./../interfaces/poke-interfaces";
-import { useRouter } from "next/router";
 
 const LIMIT = 0;
 
@@ -29,7 +28,6 @@ const PokeTeamProvider: React.FC<IPokeTeamProvider> = ({ children }) => {
   const [pokeTeam, setPokeTeam] = React.useState<IPokemon[]>([]);
   const [limitOfPokemons, setLimitOfPokemons] = React.useState<number>(LIMIT);
   const [teamSelector, setTeamSelector] = React.useState<boolean>(false);
-  useRouter;
   const addPokemon = (pokemon: IPokemon) => {
     const _team = [...pokeTeam];
     _team.push(pokemon);
